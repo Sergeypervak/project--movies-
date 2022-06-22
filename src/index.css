@@ -15,3 +15,7 @@ code {
 nav {
   padding: 0 1rem;
 }
+
+.content {
+  min-height: calc(100vh -70px - 64px);
+}
