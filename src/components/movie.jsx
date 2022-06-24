@@ -2,4 +2,4 @@ function Movie (props) {
 
 }
 
-exprot {Movie}
+export {Movie}

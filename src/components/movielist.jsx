@@ -2,4 +2,4 @@ function Movielist (props) {
 
 }
 
-exprot {Movielist};
+export {Movielist};
