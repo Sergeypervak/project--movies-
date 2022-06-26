@@ -8,9 +8,9 @@ state = {
 handleKey = (event) => {
  if (event.key === 'Enter') {
     this.props.searchMovies (this.state.search);
- }
+ }}
 
-}
+
 
 render () {
     return   <div className="row">
@@ -25,6 +25,7 @@ render () {
             onKeyDown={this.handleKey}        
       
       />   
+       <button className='btn search-btn' onClick={()=>this.props.searchMovies (this.state.search)}>ПОИСК</button>
        </div>
     </div>
   </div>
