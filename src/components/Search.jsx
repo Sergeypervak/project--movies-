@@ -3,6 +3,8 @@ import React from "react";
 class Search extends React.Component {
 state = {
    search: '', 
+   type: 'all',
+
 
 }
 
@@ -11,7 +13,9 @@ handleKey = (event) => {
     this.props.searchMovies (this.state.search);
  }}
 
+handleFilter = (event) => {
 
+}
 
 render () {
     return   <div className="row">
@@ -31,19 +35,19 @@ render () {
     <div>
     
       <label>
-      <input class="with-gap" name="type" type="radio" value='' />
+      <input class="with-gap" name="type" type="radio" data-type="" />
         <span>Films and Series</span>
       </label>
    
     
       <label>
-      <input class="with-gap" name="type" type="radio" value='' />
+      <input class="with-gap" name="type" type="radio" data-type="movie" />
         <span>only Films</span>
       </label>
     
     
       <label>
-        <input class="with-gap" name="type" type="radio" value='' />
+        <input class="with-gap" name="type" type="radio"data-type="series"  />
         <span>only Series</span>
       </label>
      
