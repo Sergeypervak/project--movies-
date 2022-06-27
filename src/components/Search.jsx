@@ -29,24 +29,24 @@ render () {
        <button className='btn search-btn' onClick={()=>this.props.searchMovies (this.state.search)}>ПОИСК</button>
       </div>
     <div>
-    <p>
+    
       <label>
-      <input class="with-gap" name="group1" type="radio" value='' />
+      <input class="with-gap" name="type" type="radio" value='' />
         <span>Films and Series</span>
       </label>
-    </p>
-    <p>
+   
+    
       <label>
-      <input class="with-gap" name="group1" type="radio" value='' />
+      <input class="with-gap" name="type" type="radio" value='' />
         <span>only Films</span>
       </label>
-    </p>
-    <p>
+    
+    
       <label>
-        <input class="with-gap" name="group1" type="radio" value='' />
+        <input class="with-gap" name="type" type="radio" value='' />
         <span>only Series</span>
       </label>
-    </p> 
+     
 
     </div>
     </div>

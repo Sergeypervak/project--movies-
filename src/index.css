@@ -33,3 +33,7 @@ gap: 1rem;
   right: 0.5rem;
 
 }
+
+label:not(:last-child) {
+  margin-right: 4rem;
+}
