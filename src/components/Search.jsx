@@ -4,6 +4,7 @@ class Search extends React.Component {
     state = {
         search: "",
         type: "all",
+        
     };
 
     handleKey = (event) => {
