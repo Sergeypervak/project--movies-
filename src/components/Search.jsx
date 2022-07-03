@@ -23,9 +23,9 @@ class Search extends React.Component {
         return (
             <div className="row">
                 <div className="col s12">
-                    <div className="input-field ">
+                    <div className="input-field " >
                         <input
-                            placeholder="Название фильма..."
+                            placeholder="search..."
                             className="validate"
                             type="search"
                             value={this.state.search}
@@ -43,10 +43,11 @@ class Search extends React.Component {
                                   this.state.type)
                             }
                         >
-                            ПОИСК
+                            SEARCH
                         </button>
                     </div>
                     <div>
+                       <p>
                         <label>
                             <input
                                 className="with-gap"
@@ -58,7 +59,8 @@ class Search extends React.Component {
                             />
                             <span>Films and Series</span>
                         </label>
-
+                            </p>
+                            <p>
                         <label>
                             <input
                                 className="with-gap"
@@ -70,7 +72,8 @@ class Search extends React.Component {
                            />
                             <span>only Films</span>
                         </label>
-
+                            </p>
+                            <p>
                         <label>
                             <input
                                 className="with-gap"
@@ -82,6 +85,7 @@ class Search extends React.Component {
                             />
                             <span>only Series</span>
                         </label>
+                            </p>
                     </div>
                 </div>
                 
