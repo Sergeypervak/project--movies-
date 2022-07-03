@@ -7,7 +7,7 @@ function Movies (props) {
 return <div className="movies">
     {movies.length ? movies.map(movie =>(
         <Movie key={movie.imdbID} {...movie}/>
-    )) : <span>С таким названием - ничего не найдено. Проверьте свой запрос !</span>
+    )) : <span>incorect movie title, try another please</span>
 }
 </div>
 
