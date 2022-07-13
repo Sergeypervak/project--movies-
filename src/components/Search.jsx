@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
-class Search extends React.Component {
+const Search = (props) => {
+   const {
+    searchMovies = Function.prototype,
+} = props;
+   
     state = {
         search: "",
         type: "all",
@@ -9,7 +13,7 @@ class Search extends React.Component {
 
     handleKey = (event) => {
         if (event.key === "Enter") {
-            this.props.searchMovies(this.state.search,this.state.type);
+            searchMovies(this.state.search,this.state.type);
         }
     };
 
