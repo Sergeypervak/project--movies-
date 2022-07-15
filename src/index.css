@@ -38,3 +38,7 @@ gap: 1rem;
 label:not(:last-child) {
   margin-right: 4rem;
 }
+
+/* footer {position: absolute;} */
+  
+

@@ -5,46 +5,41 @@ const Search = (props) => {
     searchMovies = Function.prototype,
 } = props;
    
-    state = {
-        search: "",
-        type: "all",
+const [search, setSearch] = useState('');   
+const [type, setType] = useState('all');   
+
+    const handleKey = (event) => {
+        if (event.key === "Enter") {
+            searchMovies(search,type);
+        }};
+
+    const handleFilter = (event) => {
+     setType(event.target.dataset.type); 
+     searchMovies(search,event.target.dataset.type); 
         
     };
-
-    handleKey = (event) => {
-        if (event.key === "Enter") {
-            searchMovies(this.state.search,this.state.type);
-        }
-    };
-
-    handleFilter = (event) => {
-        this.setState(() => ({type: event.target.dataset.type }), () =>{
-          this.props.searchMovies(this.state.search,this.state.type);
-  });
-      };
-
-    render() {
+    
         return (
-            <div className="row">
+            <div className="row">   
                 <div className="col s12">
                     <div className="input-field " >
                         <input
                             placeholder="search..."
                             className="validate"
                             type="search"
-                            value={this.state.search}
+                            value={search}
                             onChange={(e) =>
-                                this.setState({ search: e.target.value })
-                            }
-                            onKeyDown={this.handleKey}
+                                setSearch(e.target.value)}
+                            
+                            onKeyDown={handleKey}
                         />
 
                         <button
                             className="btn search-btn"
                             onClick={() =>
-                                this.props.searchMovies(
-                                  this.state.search, 
-                                  this.state.type)
+                                searchMovies(
+                                  search, 
+                                  type)
                             }
                         >
                             SEARCH
@@ -58,8 +53,8 @@ const Search = (props) => {
                                 name="type"
                                 type="radio"
                                 data-type="all"
-                                onChange={this.handleFilter}
-                                checked={this.state.type === 'all'}
+                                onChange={handleFilter}
+                                checked={type === 'all'}
                             />
                             <span>Films and Series</span>
                         </label>
@@ -71,8 +66,8 @@ const Search = (props) => {
                                 name="type"
                                 type="radio"
                                 data-type="movie"
-                                onChange={this.handleFilter}
-                                checked={this.state.type === 'movie'}
+                                onChange={handleFilter}
+                                checked={type === 'movie'}
                            />
                             <span>only Films</span>
                         </label>
@@ -84,8 +79,8 @@ const Search = (props) => {
                                 name="type"
                                 type="radio"
                                 data-type="series"
-                                onChange={this.handleFilter}
-                                checked={this.state.type === 'series'}
+                                onChange={handleFilter}
+                                checked={type === 'series'}
                             />
                             <span>only Series</span>
                         </label>
@@ -96,6 +91,6 @@ const Search = (props) => {
             </div>
         );
     }
-}
+
 
 export { Search };
